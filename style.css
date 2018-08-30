@@ -1,0 +1,320 @@
+body{
+    padding: 0;
+    margin:0;
+    position: relative;
+}
+.header{
+  height: 15em;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  position: relative;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+.left{
+    height: 15em;
+    width: 50%;
+    position: relative;
+    display: flex;
+    background-color: #275B6C;
+  }
+.ani-box{
+    height: 15em;
+    width: 40%;
+    position: absolute;
+    margin-left: 0;
+}
+.navbox{
+    width: 10%;
+    height: 15em;
+    background-color: #275B6C;
+    color: white;
+    position: absolute;
+    text-align: center;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-name: example;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    opacity: 0;
+  }
+  .navbtn{
+    margin-top: .5em;
+      line-height: 50px;
+      height: 50px;
+      text-align: center;
+      width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .nav-effect {
+      transition: all 0.3s;
+      position: relative;
+  }
+  .nav-effect span {
+      transition: all 0.3s;
+  }
+  .nav-effect::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.3s;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+      border-top-style: solid;
+      border-bottom-style: solid;
+      border-top-color: rgba(255,255,255,0.5);
+      border-bottom-color: rgba(255,255,255,0.5);
+      transform: scale(0.1, 1);
+  }
+  .nav-effect:hover span {
+      letter-spacing: 2px;
+  }
+  .nav-effect:hover::before {
+      opacity: 1;	
+      transform: scale(1, 1);	
+  }
+  .nav-effect::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all 0.3s;
+      background-color: rgba(255,255,255,0.1);
+  }
+  .nav-effect:hover::after {
+      opacity: 0;	
+      transform: scale(0.1, 1);
+  }
+  .title{
+    height: 15em;
+    width: 60%;
+    margin-left: 40%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-family: 'Cinzel', serif;
+    background-color: #275B6C;
+}
+#name-plate{
+    margin-top: 3em;
+}
+.banner{
+    height: 15em;
+    width: 50%;
+    position: relative;
+    overflow-x: hidden;
+  }
+  .banner-one{
+    height: 15em;
+    width: 100%;
+    position: absolute;
+    background-color: blue;
+    background-image: url("./assets/img/c-town-el.jpg");
+    background-size: cover;
+    animation: bannerOne 15s linear infinite;
+  }
+  .banner-two{
+    height: 15em;
+    width: 100%;
+    position: absolute;
+    background-color: purple;
+    background-image: url("./assets/img/c-town-bean.jpg");
+    background-size: cover;
+    animation: bannerTwo 15s linear infinite;
+  }
+  .banner-three{
+    height: 15em;
+    width: 100%;
+    position: absolute;
+    background-color: orange;
+    background-image: url("./assets/img/c-town-river.jpg");
+    background-size: cover;
+    animation: bannerThree 15s linear infinite;
+  }
+.container{
+    width: 100%;
+    display: flex;
+}
+.sidebar{
+    width: 20%;
+    background-color: #357D95;
+    color: white;
+}
+.main{
+    border: 1px solid black;
+    width: 80%;
+}
+.app-display{
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.app-box{
+    border: 1px solid pink;
+    display: block;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2em;
+}
+.app-box-title{
+    text-align: center;
+}
+.app-box-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+.app-card{
+    border: 1px solid black;
+    width: 30%;
+    display: block;
+    height: 20em;
+}
+.app-card-img{
+    width: 100%;
+    height: 10em;
+    border: 1px solid black;
+}
+.app-card-content{
+    width: 100%;
+    height: 10em;
+}
+.app-card-text{
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 1px solid pink;
+}
+.footer{
+    width: 100%;
+    height: 3em;
+    margin-bottom: 0;
+    background-color: #275B6C;
+    color: white;
+    position: absolute;
+}
+
+@keyframes example {
+    from {background-color:#275B6C; opacity: 0}
+    to {background-color: #0A1519; width: 100%; opacity: 100}
+}
+
+@keyframes bannerOne{
+    0% {
+      left: 0;
+    }
+    31% {
+      left: 0;
+    }
+    34% {
+      left: -100%;
+    }
+    97% {
+      left: 100%;
+    }
+    100%{
+      left: 0;
+    }
+  }
+  
+  @keyframes bannerTwo{
+    0% {
+      left: 100%;
+    }
+    31% {
+      left: 100%;
+    }
+    34% {
+      left: 0;
+    }
+    64% {
+      left: 0;
+    }
+    67% {
+      left: -100%;
+    }
+    100%{
+      left: -100%;
+    }
+  }
+  
+  @keyframes bannerThree{
+    0% {
+      left: 100%;
+    }
+    64% {
+      left: 100%;
+    }
+    67% {
+      left: 0;
+    }
+    97% {
+      left: 0;
+    }
+    100%{
+      left: -100%;
+    }
+  }
+
+
+@media (max-width: 960px){
+    .header{
+      display: flex;
+      flex-direction: column-reverse;
+      height: 30em;
+    }
+    .left{
+      width: 100%;
+    }
+    .banner{
+      width: 100%;
+    }
+    .ani-box{
+      width: 50%;
+    }
+    .title{
+        width: 50%;
+        margin-left: 50%;
+    }
+  }
+  
+  @media (max-width: 768px){
+  }
+  @media (max-width: 640px){}
+  @media (max-width: 414px){
+      .header{
+        height: 35em;
+      }
+      .left{
+        display: block;
+        height: 20em;
+      }
+      .title{
+          height: 5em;
+          width: 100%;
+          margin-left: 0%;
+          margin-bottom: 5em;
+      }
+      #name-plate{
+        margin-top: .5em;
+      }
+      .ani-box{
+          width:100%;
+          height: 15;
+          margin-top: 5em;
+      }
+  }
