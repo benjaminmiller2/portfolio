@@ -104,16 +104,34 @@ body{
     transform: scale(0.1, 1);
 }
 .social{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4em;
+    padding-top: .5em;
+    padding-bottom: 1em;
+    text-align: center;
+    background-color: #275B6C;
+}
+.socialbtn{
+    margin-top: 1em;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2em;
-    border: 1px solid white;
-    text-align: center;
+}
+a{
+    color: white;
+}
+a:link{
+    text-decoration: none;
 }
 .main{
     width: 80%;
     margin-left: 20%;
+    background-color: whitesmoke;
 }
 .header{
     height: 20em;
@@ -178,7 +196,6 @@ body{
     margin-left: auto;
 }
 .app-box{
-    border: 1px solid #275B6C;
     display: block;
     width: 100%;
     margin-right: auto;
@@ -195,11 +212,36 @@ body{
     margin-bottom: 2em;
     padding: 1em;
 }
-.app-card{
-    border: 1px solid black;
+.app-profile-box{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+    padding: 1em;  
+}
+.profile-img-box{
     width: 30%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.profile-img-box:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.profile-img{
+    width: 100%;
+    height: 100%
+}
+.profile-text-box{
+    width: 65%;
+    background-color: white;
+    padding: 1em;
+}
+.app-card{
+    width: 35%;
     display: block;
-    height: 20em;
+    height: 25em;
+    margin-bottom: 2em;
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
@@ -209,11 +251,14 @@ body{
 .app-card-img{
     width: 100%;
     height: 10em;
-    border-bottom: 1px solid black;
+}
+.app-img{
+    width: 100%;
+    height: 100%;
 }
 .app-card-content{
     width: 100%;
-    height: 10em;
+    height: 15em;
 }
 .app-card-text{
     margin-left: 1em;
@@ -227,7 +272,6 @@ body{
     background-color: #275B6C;
     color: white;
     position: absolute;
-    margin-top: 1em;
     z-index: 2;
     text-align: center;
 }
@@ -329,9 +373,6 @@ body{
   }
   @media (max-width: 640px){}
   @media (max-width: 414px){
-    .container{
-        display: block;
-    }
     .sidebar{
         display: none;
     }
@@ -345,46 +386,24 @@ body{
     .title{
         height: 5em;
         width: 100%;
-        margin-top: 0;
     }
     #name-plate{
-        margin-bottom: 0;
+        margin-top: 8em;
     }
     .banner{
         height: 15em;
         width: 100%;
         margin-left: 0;
-        position: relative;
-        overflow-x: hidden;
     }
     .banner-one{
         height: 15em;
-        width: 100%;
-        position: absolute;
-        background-color: #275B6C;
-        background-image: url("./assets/img/c-town-el.jpg");
-        background-size: cover;
-        animation: bannerOne 15s linear infinite;
     }
     .banner-two{
         height: 15em;
-        width: 100%;
-        position: absolute;
-        background-color: #275B6C;
-        background-image: url("./assets/img/c-town-bean.jpg");
-        background-size: cover;
-        animation: bannerTwo 15s linear infinite;
     }
     .banner-three{
         height: 15em;
-        width: 100%;
-        position: absolute;
-        background-color: #275B6C;
-        background-image: url("./assets/img/c-town-river.jpg");
-        background-size: cover;
-        animation: bannerThree 15s linear infinite;
     }
-
     .left-hidden{
         height: 20em;
         width: 100%;
@@ -396,4 +415,52 @@ body{
         position: absolute;
         animation-name: example-hidden;
     }
+    .app-display{
+        width: 100%;
+    }
+    .app-profile-box{
+        display: block;
+        margin-bottom: 2em;
+        padding: 0;  
+    }
+    .profile-img-box{
+        width: 100%;
+        height: 100%;
+    }
+    .profile-text-box{
+        width: 100%;
+        background-color: white;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .profile-text{
+        text-align: center;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .app-box-body{
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        padding: 0;
+    }
+    .app-card{
+        width: 100%;
+        display: block;
+        height: 25em;
+        margin-bottom: 1em;
+    }
+    .app-card-content{
+        width: 100%;
+        height: 15em;
+    }
+    .app-card-text{
+        margin-left: 1em;
+        margin-right: 1em;
+        border: 1px solid pink;
+    }
+
   }
